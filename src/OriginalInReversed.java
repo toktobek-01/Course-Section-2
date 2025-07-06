@@ -20,6 +20,6 @@ public class OriginalInReversed {
         }
 
         String reversName = new String(reversed);
-        System.out.println("Reverseed name as a String is: " + reversName);
+        System.out.println("Reversed name as a String is: " + reversName);
     }
 }
