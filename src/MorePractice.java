@@ -1,12 +1,26 @@
+import java.util.Scanner;
+
 public class MorePractice {
     public static void main(String[] args) {
-        String dog = "Shaggy";
-        System.out.println("Your pet's name is: " + dog);
+       // System.out.println("Your pet's name is: " + dog);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        String name = sc.nextLine().toUpperCase();
+        System.out.println("Your name is: " + name);
 
-        for(int i = 0; i < dog.length(); ++i) {
-            char s = dog.charAt(i);
+        char [] letters = name.toCharArray();
+        char [] reverse = new char [letters.length];
 
-            System.out.println("Index: " + i + " Character: " + s);
+        for(int i = 0; i < reverse.length; i++) {
+            reverse[i] = letters[letters.length - 1 -i];
         }
+        System.out.println("Revers of your name is: " + reverse);
+
+        for ( int i = 0; i < letters.length; i++) {
+            System.out.println(letters[i]);
+        }
+
+
+
     }
 }
