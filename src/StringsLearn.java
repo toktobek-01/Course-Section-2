@@ -5,8 +5,8 @@ public class StringsLearn {
         System.out.println(message);
     }
     
-    public char middleName() {
-        return middleName.charAt(0);
+    public class Mname {
+     String middleName = "Stuart";
     }
 
     public int add(int num1, int num2, int num3) {
@@ -15,6 +15,9 @@ public class StringsLearn {
 
     public void test(String[] words) {
 
+    }
+    public  char getMiddleName() {
+        return middleName.charAt(0);
     }
 
     public static void main(String[] args) {
