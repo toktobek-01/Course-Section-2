@@ -39,6 +39,13 @@ public class StudentGrades {
                     grades.put(name, newGrade);
                     System.out.println(name + " has been added with grade: " + newGrade);
                 }
+                else if (name.equalsIgnoreCase("list")) {
+                    System.out.println("📋 All students and their grades:");
+                    for (Map.Entry<String, Integer> entry : grades.entrySet()) {
+                        System.out.println(entry.getKey() + " → " + entry.getValue());
+                    }
+                }
+
             }
         }
     }
