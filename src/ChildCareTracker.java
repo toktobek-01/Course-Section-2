@@ -1,5 +1,8 @@
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.time.LocalDateTime;
+import  java.util.ArrayList;
 
 public class ChildCareTracker {
     public static void main(String[] args) {
@@ -9,6 +12,8 @@ public class ChildCareTracker {
 
         // Tracks currently present children
         HashSet<String> presentChildren = new HashSet<>();
+        ArrayList<String> logs = new ArrayList<>();
+
 
         String choice = "";
 
@@ -21,6 +26,9 @@ public class ChildCareTracker {
                 System.out.print("Enter child's name: ");
                 String child = scanner.nextLine();
                 presentChildren.add(child);
+                String timestamp = LocalDateTime.now().toString();
+                logs.add("✅ " + child + " entered at " + timestamp);
+                System.out.println("✅ " + child + " marked as Entered at " + timestamp);
                 System.out.println("✅ " + child + " marked as Entered.");
             } else if (choice.equalsIgnoreCase("take")) {
                 System.out.print("Enter child's name: ");
@@ -43,6 +51,7 @@ public class ChildCareTracker {
             } else if (!choice.equalsIgnoreCase("exit")) {
                 System.out.println("Invalid option.");
             }
+
         }
 
         System.out.println("👋 Goodbye!");
